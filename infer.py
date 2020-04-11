@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 from network import DSR_Net
 import numpy as np
 from scipy.ndimage.interpolation import zoom
@@ -154,16 +153,12 @@ def eval(dataset, crf):
 
 if __name__ == '__main__':
     model = DSR_Net((432, 432, 3))
-    model.load_weights('model/model-final.hdf5', by_name=True)
+    model.load_weights('model/model-final.hdf5')
 
-    #predict_list = ['PASCAL-S', 'HKU-IS', 'DUTS-TE', 'DUT-OMRON', 'ECSSD']
-    predict_list = ['ECSSD']
+    predict_list = ['PASCAL-S', 'HKU-IS', 'DUTS-TE', 'DUT-OMRON', 'ECSSD']
     for dataset in predict_list:
-        print 'predict'
         predict(model, dataset)
-        print 'crf'
         crf(dataset)
-        print 'eval'
         eval(dataset, True)#True indicates CRF postprocess
 
 
