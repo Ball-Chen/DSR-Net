@@ -1,5 +1,7 @@
 # Deep Sub-region Network for Salient Object Detection
-by Liansheng Wang, Rongzhen Chen, Lei Zhu, Haoran Xie, and Xiaomeng Li
+
+by Liansheng Wang, Rongzhen Chen, Lei Zhu, Haoran Xie, and Xiaomeng Li.
+
 This implementation is written by Rongzhen Chen at the Xiamen University.
 
 ***
