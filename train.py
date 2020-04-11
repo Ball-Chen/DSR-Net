@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1"
 from network import DSR_Net
 from keras.optimizers import *
 from keras.callbacks import ModelCheckpoint,TensorBoard
